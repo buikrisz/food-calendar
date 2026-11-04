@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // GitHub Pages serves this repository as a project site under /food-calendar.
+  // Keep local development at the root URL.
+  output: "export",
+  basePath: process.env.GITHUB_ACTIONS ? "/food-calendar" : "",
+  trailingSlash: true,
+  images: { unoptimized: true },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
