@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
   basePath: process.env.GITHUB_ACTIONS ? "/food-calendar" : "",
   trailingSlash: true,
   images: { unoptimized: true },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {
